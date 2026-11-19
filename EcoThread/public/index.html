@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoThread 100/100 — Carbon-Aware Code Optimizer & Green SaaS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans">
+  <div class="max-w-5xl mx-auto p-4 sm:p-8">
+    <!-- Top Nav -->
+    <header class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-emerald-500/20">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></span>
+          <h1 class="text-2xl font-extrabold tracking-tight text-white">Eco<span class="text-emerald-400">Thread</span> <span class="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">100/100 PRO</span></h1>
+        </div>
+        <p class="text-xs text-slate-400 mt-1">Carbon-Aware Code Optimizer &bull; Powered by Mallik Group 18-Digit Gateway</p>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <input id="proKey" type="password" maxlength="18" placeholder="18-Digit Mallik Pro Key" class="bg-slate-900 border border-emerald-500/40 rounded-xl px-3 py-2 text-xs font-mono text-emerald-300 w-48 focus:outline-none" />
+        <button onclick="saveKey()" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs px-4 py-2 rounded-xl">Activate Pro</button>
+      </div>
+    </header>
+
+    <!-- Live Optimizer Studio -->
+    <main class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+      <section class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="text-sm font-bold text-emerald-300 uppercase tracking-wider">1. Paste Code to Optimize</h2>
+          <span id="tierStatus" class="text-[11px] text-slate-400">Free Tier</span>
+        </div>
+        <textarea id="codeInput" rows="11" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 font-mono text-xs text-emerald-200 focus:outline-none focus:border-emerald-500" placeholder="Paste Python, JavaScript, SQL, or HTML here..."># Example inefficient loop
+items = []
+for i in range(10000):
+    items.append(i * 2)
+print(len(items))</textarea>
+        <button onclick="runOptimizer()" class="mt-3 w-full py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs tracking-wide transition">
+          Analyze Carbon Footprint &amp; Optimize Code
+        </button>
+      </section>
+
+      <section class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between">
+        <div>
+          <h2 class="text-sm font-bold text-emerald-300 uppercase tracking-wider mb-3">2. Green Score &amp; Savings Report</h2>
+          <div class="grid grid-cols-3 gap-3 text-center mb-4">
+            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+              <div class="text-[11px] text-slate-400">Green Score</div>
+              <div id="scoreVal" class="text-xl font-black text-emerald-400 mt-1">100/100</div>
+            </div>
+            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+              <div class="text-[11px] text-slate-400">Size Cut</div>
+              <div id="cutVal" class="text-xl font-black text-sky-400 mt-1">0%</div>
+            </div>
+            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
+              <div class="text-[11px] text-slate-400">CO₂ Saved</div>
+              <div id="co2Val" class="text-xl font-black text-amber-300 mt-1">0 mg</div>
+            </div>
+          </div>
+
+          <div id="tipsBox" class="space-y-2 text-xs text-slate-300 mb-3">
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">Ready to benchmark your code energy efficiency.</div>
+          </div>
+
+          <pre id="optOut" class="bg-slate-950 border border-slate-800 rounded-xl p-3 font-mono text-[11px] text-slate-300 overflow-x-auto max-h-40"></pre>
+        </div>
+      </section>
+    </main>
+
+    <!-- Monetization & SaaS Earning Plans -->
+    <section class="mt-8 bg-slate-900/70 border border-emerald-500/20 rounded-2xl p-6">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+        <div>
+          <h2 class="text-lg font-extrabold text-white">EcoThread SaaS Plans &amp; API Monetization</h2>
+          <p class="text-xs text-slate-400">Automated global card/crypto checkout &bull; Direct AED payout settlement via Al Maryah Community Bank (Mbank UAE)</p>
+        </div>
+        <span class="text-xs px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">Merchant Payouts Active</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
+          <div class="text-xs font-bold text-slate-400">STARTER</div>
+          <div class="text-2xl font-black text-white mt-1">$0 <span class="text-xs font-normal text-slate-500">/ month</span></div>
+          <p class="text-xs text-slate-400 mt-2">50 code carbon scans/day + basic minification.</p>
+          <button onclick="runOptimizer()" class="mt-4 w-full py-2 rounded-lg bg-slate-800 text-xs font-bold text-white">Use Free</button>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-950 border-2 border-emerald-500 relative">
+          <span class="absolute -top-2.5 right-3 bg-emerald-500 text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-full">MOST POPULAR</span>
+          <div class="text-xs font-bold text-emerald-400">ECOTHREAD PRO</div>
+          <div class="text-2xl font-black text-white mt-1">$9 <span class="text-xs font-normal text-slate-400">(33 AED) / mo</span></div>
+          <p class="text-xs text-slate-300 mt-2">Unlimited optimizations, 18-Digit API Key access, and full minified exports.</p>
+          <button onclick="subscribePlan('Pro - $9/mo (33 AED)')" class="mt-4 w-full py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-extrabold">Subscribe &amp; Get Key</button>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
+          <div class="text-xs font-bold text-sky-400">ENTERPRISE ESG</div>
+          <div class="text-2xl font-black text-white mt-1">$29 <span class="text-xs font-normal text-slate-500">(107 AED) / mo</span></div>
+          <p class="text-xs text-slate-400 mt-2">GitHub Actions CI/CD carbon gate + downloadable ESG compliance PDF.</p>
+          <button onclick="subscribePlan('Enterprise ESG - $29/mo (107 AED)')" class="mt-4 w-full py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs font-extrabold">Upgrade Team</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-6 text-center text-[11px] text-slate-500">
+      Copyright &copy; 2026 Niraj Mallik (Mallik Group / nirajmallik143-hub) &bull; Licensed under the MIT License
+    </footer>
+  </div>
+
+  <script>
+    function saveKey() {
+      const k = document.getElementById("proKey").value.trim();
+      if (/^\d{18}$/.test(k)) {
+        localStorage.setItem("mallik_master_key", k);
+        document.getElementById("tierStatus").textContent = "PRO UNLOCKED (18-Digit Key)";
+        document.getElementById("tierStatus").className = "text-[11px] font-bold text-emerald-400";
+      }
+    }
+
+    async function runOptimizer() {
+      const code = document.getElementById("codeInput").value;
+      const key = document.getElementById("proKey").value.trim() || localStorage.getItem("mallik_master_key") || "";
+      try {
+        const res = await fetch("/api/optimize", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "X-Mallik-Key": key },
+          body: JSON.stringify({ code })
+        });
+        const data = await res.json();
+        document.getElementById("scoreVal").textContent = data.green_score + "/100";
+        document.getElementById("cutVal").textContent = data.reduction_pct + "%";
+        document.getElementById("co2Val").textContent = data.co2_saved_mg + " mg";
+        document.getElementById("tierStatus").textContent = data.tier;
+        document.getElementById("tipsBox").innerHTML = data.suggestions.map(s => `<div class="p-2.5 rounded-xl bg-slate-950 border border-emerald-500/20 text-emerald-200">✓ ${s}</div>`).join("");
+        document.getElementById("optOut").textContent = data.optimized_code;
+      } catch (e) {
+        alert("Deploy to Vercel or run local server to test /api/optimize.");
+      }
+    }
+
+    function subscribePlan(planName) {
+      alert("Checkout initialized for " + planName + ".\n\nConnect your Stripe UAE / Lemon Squeezy Payment Link in EcoThread/public/index.html to receive payouts directly to your Mbank UAE IBAN.");
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const saved = localStorage.getItem("mallik_master_key");
+      if (saved) {
+        document.getElementById("proKey").value = saved;
+        saveKey();
+      }
+    });
+  </script>
+</body>
+</html>
