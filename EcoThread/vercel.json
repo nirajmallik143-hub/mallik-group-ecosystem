@@ -2,10 +2,12 @@
   "version": 2,
   "builds": [
     { "src": "api/optimize.py", "use": "@vercel/python" },
+    { "src": "api/webhook.py", "use": "@vercel/python" },
     { "src": "public/**", "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/api/optimize", "dest": "/api/optimize.py" },
+    { "src": "/api/webhook", "dest": "/api/webhook.py" },
     { "src": "/(.*)", "dest": "/public/$1" }
   ]
 }
