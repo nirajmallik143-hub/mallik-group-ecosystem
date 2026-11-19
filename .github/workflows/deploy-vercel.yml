@@ -1,0 +1,27 @@
+name: Deploy Mallik Group Web Apps to Vercel
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'EcoThread/**'
+      - 'Sikshya-AI/**'
+      - '.github/workflows/deploy-vercel.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy-vercel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+      - name: Deploy EcoThread & Sikshya-AI to Production
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          MALLIK_GROUP_API_KEY: ${{ secrets.MALLIK_GROUP_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          cd EcoThread && vercel --prod --yes --token "$VERCEL_TOKEN"
+          cd ../Sikshya-AI && vercel --prod --yes --token "$VERCEL_TOKEN"

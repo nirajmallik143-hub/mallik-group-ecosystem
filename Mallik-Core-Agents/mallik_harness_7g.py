@@ -173,6 +173,8 @@ class MallikHarness7G:
         print("  !repos          -> List all GitHub repos (@nirajmallik143-hub)")
         print("  !sync           -> Git add, commit & push monorepo")
         print("  !pipeline       -> Trigger cloud YouTube workflow")
+        print("  !deploy         -> Auto-deploy all repos to Vercel")
+        print("  !newkey         -> Issue 18-digit Pro customer key")
         print("  !note <text>    -> Save persistent memory note")
         print("  !run <cmd>      -> Execute Termux shell command")
         print("  exit            -> Quit\n")
@@ -196,6 +198,14 @@ class MallikHarness7G:
                         'git add . && git commit -m "Harness 7G auto-sync" || true && git push origin main',
                         cwd=REPO_ROOT, shell=True
                     )
+                    print()
+                    continue
+                if q == "!deploy":
+                    subprocess.run("python3 Mallik-Core-Agents/auto_deploy_vercel.py", cwd=REPO_ROOT, shell=True)
+                    print()
+                    continue
+                if q == "!newkey":
+                    subprocess.run("python3 Mallik-Core-Agents/issue_customer_key.py", cwd=REPO_ROOT, shell=True)
                     print()
                     continue
                 if q == "!pipeline":
