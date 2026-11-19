@@ -17,7 +17,7 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - name: Install Dependencies
         run: |
-          pip install google-genai openai anthropic requests pillow edge-tts
+          pip install google-genai openai anthropic requests pillow edge-tts google-api-python-client google-auth-oauthlib google-auth-httplib2
       - name: Execute Yummy Studio & USA-auto Pipelines
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}

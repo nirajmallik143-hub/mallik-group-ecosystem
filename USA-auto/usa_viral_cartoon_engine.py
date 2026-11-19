@@ -22,7 +22,7 @@ from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 
-BASE_DIR = os.path.expanduser("~/usa-viral-cartoon")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 BUILD_DIR = os.path.join(BASE_DIR, "build")
 OUT_DIR = os.path.join(BASE_DIR, "output")
 DB_PATH = os.path.join(OUT_DIR, "ledger.db")
