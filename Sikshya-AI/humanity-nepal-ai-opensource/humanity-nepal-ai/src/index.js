@@ -1,3 +1,4 @@
+/* ©Nirajmallik@hub */
 /**
  * Humanity Nepal AI — FULL SYSTEM (Open Source)
  * "Problem + Solve = Success | Think = Do"

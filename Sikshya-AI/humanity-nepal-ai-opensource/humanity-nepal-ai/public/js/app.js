@@ -1,3 +1,4 @@
+/* ©Nirajmallik@hub */
 /* ============================================================
    Humanity Nepal AI — FULL SYSTEM Frontend JavaScript
    Courses, lessons, quizzes, AI tutor, challenges, roadmap,

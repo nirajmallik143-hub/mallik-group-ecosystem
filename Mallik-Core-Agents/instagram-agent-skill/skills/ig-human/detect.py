@@ -1,3 +1,4 @@
+# ©Nirajmallik@hub
 #!/usr/bin/env python3
 """
 detect.py - a five-check panel that scores how machine-written a draft looks.

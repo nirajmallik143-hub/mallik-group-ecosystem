@@ -110,3 +110,7 @@ MIT — Free for everyone, forever.
 ---
 
 Built with ❤️ for students and humanity. Education is a right, not a privilege.
+
+
+---
+©Nirajmallik@hub

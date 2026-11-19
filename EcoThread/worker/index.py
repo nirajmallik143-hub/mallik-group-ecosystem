@@ -1,3 +1,4 @@
+# ©Nirajmallik@hub
 """Cloudflare Workers Python API for EcoThread."""
 
 import ast

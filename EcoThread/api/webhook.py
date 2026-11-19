@@ -1,3 +1,4 @@
+# ©Nirajmallik@hub
 # Copyright (c) 2026 Niraj Mallik (Mallik Group / nirajmallik143-hub)
 # Proprietary SaaS Payment Webhook — All Rights Reserved.
 

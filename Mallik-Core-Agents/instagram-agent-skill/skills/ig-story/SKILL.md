@@ -95,3 +95,7 @@ After: everyone who votes Yes gets a reply. That is the whole funnel.
 ```
 
 Nothing is posted. The user posts it.
+
+
+---
+©Nirajmallik@hub

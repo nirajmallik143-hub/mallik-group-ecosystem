@@ -176,3 +176,7 @@ Write the swipe file to `~/.claude/instagram/swipe.md`. `/ig-reel` and
 the pack is working from the user's own evidence instead of from defaults.
 
 Nothing is posted, followed, liked or messaged by this skill. It reads.
+
+
+---
+©Nirajmallik@hub

@@ -86,3 +86,7 @@ Say "write Tuesday" and I will draft it.
 Then draft on request, one at a time, each through `/ig-reel` and `/ig-human`.
 Do not dump four finished scripts at once. They will all sound the same and the
 user will shoot none of them.
+
+
+---
+©Nirajmallik@hub

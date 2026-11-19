@@ -1,3 +1,4 @@
+# ©Nirajmallik@hub
 EcoThread: AI Refactoring Engine
 Part of the humanity Nepal 7G Architecture
 Developed by: Mallik Group / Niraj Mallik

@@ -113,3 +113,7 @@ By contributing, you agree that your contributions will be licensed under the MI
 ---
 
 Built with ❤️ by MallikGroup for world students. Free education for everyone.
+
+
+---
+©Nirajmallik@hub

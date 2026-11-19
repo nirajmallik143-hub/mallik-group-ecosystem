@@ -1,3 +1,4 @@
+# ©Nirajmallik@hub
 #!/usr/bin/env python3
 """
 humanize.py - strip the machine fingerprint out of a draft.

@@ -92,3 +92,7 @@ Do not auto-post, do not automate comments, and do not use a browser tool to
 publish on the user's behalf. Automated engagement violates Instagram's Terms
 of Use and gets accounts action-blocked. This skill writes the comment. The
 user posts it.
+
+
+---
+©Nirajmallik@hub

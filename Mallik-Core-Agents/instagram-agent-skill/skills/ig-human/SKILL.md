@@ -109,3 +109,7 @@ do not tell a user their text is undetectable.
    again. Two rounds is normal. Five means the draft was written by formula,
    and the fix is a different draft, not more passes.
 5. Show the user the cleaned text and the score. Never the score alone.
+
+
+---
+©Nirajmallik@hub

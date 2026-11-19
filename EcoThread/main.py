@@ -1,3 +1,4 @@
+# ©Nirajmallik@hub
 """EcoThread command-line interface."""
 
 import argparse

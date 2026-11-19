@@ -93,3 +93,7 @@ NOISE  (2)  skipped. Replying gives them reach.
 
 Then the gate: nothing is posted until the user says yes. They paste the
 replies.
+
+
+---
+©Nirajmallik@hub

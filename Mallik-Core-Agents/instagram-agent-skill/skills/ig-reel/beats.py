@@ -1,3 +1,4 @@
+# ©Nirajmallik@hub
 #!/usr/bin/env python3
 """
 beats.py - turn a Reel script into a timed beat sheet before you record it.

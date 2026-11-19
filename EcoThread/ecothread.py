@@ -1,3 +1,4 @@
+# ©Nirajmallik@hub
 """Static Python efficiency checks and explicit, input-based CO2 estimates.
 
 Static findings are review prompts, not measurements of runtime, energy, or emissions.

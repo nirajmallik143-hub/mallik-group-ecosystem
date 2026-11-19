@@ -145,3 +145,7 @@ HOOKS  (scored)
 Shooting #5: the ratio is believable, it reads in one glance on screen,
 and the number is yours.
 ```
+
+
+---
+©Nirajmallik@hub

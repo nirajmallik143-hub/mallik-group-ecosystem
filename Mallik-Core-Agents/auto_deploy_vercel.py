@@ -1,3 +1,4 @@
+# ©Nirajmallik@hub
 #!/usr/bin/env python3
 # Copyright (c) 2026 Nirajmallik@-hub (Niraj Mallik / Mallik Group)
 # Licensed under the MIT License.

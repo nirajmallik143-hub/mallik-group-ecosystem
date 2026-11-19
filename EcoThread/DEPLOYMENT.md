@@ -36,3 +36,7 @@ curl -X POST https://<your-worker>.<your-subdomain>.workers.dev/analyze \
 ```
 
 The API expects a JSON object with a string `code` field and limits source input to 64 KiB. Invalid JSON, Python syntax errors, unsupported routes, and oversized payloads return JSON error responses. Cloudflare's `wrangler.jsonc` selects the Python Worker entry point and enables the Python Workers compatibility flag.
+
+
+---
+©Nirajmallik@hub

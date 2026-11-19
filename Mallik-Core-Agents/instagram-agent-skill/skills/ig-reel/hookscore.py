@@ -1,3 +1,4 @@
+# ©Nirajmallik@hub
 #!/usr/bin/env python3
 """
 hookscore.py - score the first line of a Reel on the five things strong hooks

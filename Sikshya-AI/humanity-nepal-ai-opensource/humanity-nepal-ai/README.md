@@ -120,3 +120,7 @@ MIT — Free for everyone, forever. See [LICENSE](LICENSE).
 **Problem + Solve = Success | Think = Do**
 
 Built with ❤️ by **MallikGroup** for world students. Education is a right, not a privilege.
+
+
+---
+©Nirajmallik@hub

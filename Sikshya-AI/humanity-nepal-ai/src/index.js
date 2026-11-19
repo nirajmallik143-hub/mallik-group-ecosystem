@@ -1,3 +1,4 @@
+/* ©Nirajmallik@hub */
 /**
  * Humanity Nepal AI — Educational Platform
  * A learning platform where students can learn AI and coding

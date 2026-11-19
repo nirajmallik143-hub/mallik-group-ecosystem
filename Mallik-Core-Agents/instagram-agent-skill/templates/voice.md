@@ -65,3 +65,7 @@ never invent one, so if this section is empty, every draft comes back with
 - **My keyword CTA, if I use one:** (one word, sayable, no spaces)
 - **What the keyword sends them:**
 - **Where my link goes:**
+
+
+---
+©Nirajmallik@hub

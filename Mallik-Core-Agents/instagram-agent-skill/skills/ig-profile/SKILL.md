@@ -80,3 +80,7 @@ is usually a grid, a story habit and a pinned post that does not exist yet.
 None of that is a rewrite.
 
 Nothing is saved to Instagram by this skill. The user edits each field.
+
+
+---
+©Nirajmallik@hub

@@ -1,3 +1,4 @@
+# ©Nirajmallik@hub
 """Small, dependency-free regression tests for EcoThread's analysis."""
 
 import unittest

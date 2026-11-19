@@ -1,3 +1,4 @@
+# ©Nirajmallik@hub
 # Bad code - O(n2)
 def find_duplicates(arr):
     dups = []

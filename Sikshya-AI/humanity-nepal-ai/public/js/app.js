@@ -1,3 +1,4 @@
+/* ©Nirajmallik@hub */
 /* ============================================================
    Humanity Nepal AI — Frontend JavaScript
    Handles course loading, lesson viewing, AI tutor chat,

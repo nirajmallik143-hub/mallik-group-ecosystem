@@ -1,3 +1,4 @@
+# ©Nirajmallik@hub
 #!/usr/bin/env python3
 """
 swipe.py - rank reels you collected by how far they beat their own account,

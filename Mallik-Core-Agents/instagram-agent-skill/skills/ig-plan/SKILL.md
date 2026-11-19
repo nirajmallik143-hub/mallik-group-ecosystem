@@ -98,3 +98,7 @@ Say "write Tuesday" and I will draft it.
 Write the plan to `~/.claude/instagram/plan.md` so the other skills can read
 it. Nothing is scheduled or posted anywhere. This is a plan and the user runs
 it.
+
+
+---
+©Nirajmallik@hub

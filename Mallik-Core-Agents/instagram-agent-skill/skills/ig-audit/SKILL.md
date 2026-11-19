@@ -102,3 +102,7 @@ DO MORE: the ones with a cost you paid and a number attached.
 Then hand the conclusions to `/ig-plan` so next week is built on the user's own
 evidence rather than on defaults, and to `/ig-viral` so the swipe file gets
 filtered to the formulas that work for this account specifically.
+
+
+---
+©Nirajmallik@hub
