@@ -1,0 +1,302 @@
+[
+  {
+    "day": 1,
+    "niche": "Space & Planets",
+    "slots": {
+      "slot_1_morning_short": "Space & Planets \u2014 Hook: Why does it rain real diamonds on Neptune?",
+      "slot_2_midday_long": "Space & Planets \u2014 Episode: Blast Off to the Ice Giants: Uranus and Neptune",
+      "slot_3_afternoon_short": "Space & Planets \u2014 Hook: Which planet is hot enough to melt lead?",
+      "slot_4_evening_long": "Space & Planets \u2014 Episode: Surviving the Wild Weather of Our Solar System"
+    }
+  },
+  {
+    "day": 2,
+    "niche": "Ocean Superpowers",
+    "slots": {
+      "slot_1_morning_short": "Ocean Superpowers \u2014 Hook: This ocean creature has 3 hearts and blue blood!",
+      "slot_2_midday_long": "Ocean Superpowers \u2014 Episode: Deep Sea Mysteries: Inside the Midnight Zone",
+      "slot_3_afternoon_short": "Ocean Superpowers \u2014 Hook: Why do sea otters hold hands while sleeping?",
+      "slot_4_evening_long": "Ocean Superpowers \u2014 Episode: Coral Reef Rescue: How Sea Animals Help Each Other"
+    }
+  },
+  {
+    "day": 3,
+    "niche": "How Machines Work",
+    "slots": {
+      "slot_1_morning_short": "How Machines Work \u2014 Hook: How does a 300-ton airplane stay up in the sky?",
+      "slot_2_midday_long": "How Machines Work \u2014 Episode: Inside a Giant Jet Engine: Science of Flight",
+      "slot_3_afternoon_short": "How Machines Work \u2014 Hook: Why dont tall skyscrapers fall over in the wind?",
+      "slot_4_evening_long": "How Machines Work \u2014 Episode: Building Mega Bridges and Towers with Professor Leo"
+    }
+  },
+  {
+    "day": 4,
+    "niche": "Visual Math Magic",
+    "slots": {
+      "slot_1_morning_short": "Visual Math Magic \u2014 Hook: Can you solve Pips 5-second pizza fraction trick?",
+      "slot_2_midday_long": "Visual Math Magic \u2014 Episode: The Great Galaxy Bakery: Fractions Made Easy",
+      "slot_3_afternoon_short": "Visual Math Magic \u2014 Hook: Why is zero the most powerful number in math?",
+      "slot_4_evening_long": "Visual Math Magic \u2014 Episode: Secret Patterns in Nature: Counting and Symmetry"
+    }
+  },
+  {
+    "day": 5,
+    "niche": "Dinosaur Science",
+    "slots": {
+      "slot_1_morning_short": "Dinosaur Science \u2014 Hook: Why did T-Rex have tiny arms and how strong were they?",
+      "slot_2_midday_long": "Dinosaur Science \u2014 Episode: Time-Travel Safari: Meet the Cretaceous Giants",
+      "slot_3_afternoon_short": "Dinosaur Science \u2014 Hook: Which dinosaur had a built-in trumpet on its head?",
+      "slot_4_evening_long": "Dinosaur Science \u2014 Episode: How Fossils Tell Stories from 65 Million Years Ago"
+    }
+  },
+  {
+    "day": 6,
+    "niche": "Space & Planets",
+    "slots": {
+      "slot_1_morning_short": "Space & Planets \u2014 Hook: What happens if you try to stand on Jupiter?",
+      "slot_2_midday_long": "Space & Planets \u2014 Episode: Journey Through Jupiters Giant Red Storm",
+      "slot_3_afternoon_short": "Space & Planets \u2014 Hook: Why does the Moon change shape every night?",
+      "slot_4_evening_long": "Space & Planets \u2014 Episode: Moon Base Mission: Gravity, Craters and Phases"
+    }
+  },
+  {
+    "day": 7,
+    "niche": "Animal Mysteries",
+    "slots": {
+      "slot_1_morning_short": "Animal Mysteries \u2014 Hook: How can a chameleon change colors in 2 seconds?",
+      "slot_2_midday_long": "Animal Mysteries \u2014 Episode: Masters of Disguise: Rain Forest Camouflage",
+      "slot_3_afternoon_short": "Animal Mysteries \u2014 Hook: Which bird can fly backwards like a helicopter?",
+      "slot_4_evening_long": "Animal Mysteries \u2014 Episode: Tiny Flyers: How Bees and Hummingbirds Navigate"
+    }
+  },
+  {
+    "day": 8,
+    "niche": "How Machines Work",
+    "slots": {
+      "slot_1_morning_short": "How Machines Work \u2014 Hook: Where does electricity go when you flip a switch?",
+      "slot_2_midday_long": "How Machines Work \u2014 Episode: Pips Power Lab: Circuits, Batteries and Light",
+      "slot_3_afternoon_short": "How Machines Work \u2014 Hook: How do giant submarines breathe underwater?",
+      "slot_4_evening_long": "How Machines Work \u2014 Episode: Undersea Explorers: How Submarines Dive and Rise"
+    }
+  },
+  {
+    "day": 9,
+    "niche": "Visual Math Magic",
+    "slots": {
+      "slot_1_morning_short": "Visual Math Magic \u2014 Hook: How many triangles are hidden in this star puzzle?",
+      "slot_2_midday_long": "Visual Math Magic \u2014 Episode: Shape Detectives: Geometry in the Real World",
+      "slot_3_afternoon_short": "Visual Math Magic \u2014 Hook: Can you double a penny to a million dollars?",
+      "slot_4_evening_long": "Visual Math Magic \u2014 Episode: Magic Multiplication: Fast Tricks with Pip"
+    }
+  },
+  {
+    "day": 10,
+    "niche": "Dinosaur Science",
+    "slots": {
+      "slot_1_morning_short": "Dinosaur Science \u2014 Hook: Which flying reptile was as big as a fighter jet?",
+      "slot_2_midday_long": "Dinosaur Science \u2014 Episode: Skies of the Dinosaurs: Pterosaurs in Action",
+      "slot_3_afternoon_short": "Dinosaur Science \u2014 Hook: Why did Stegosaurus have giant plates on its back?",
+      "slot_4_evening_long": "Dinosaur Science \u2014 Episode: Herbivore Heroes: How Plant-Eating Dinos Stayed Safe"
+    }
+  },
+  {
+    "day": 11,
+    "niche": "Space & Planets",
+    "slots": {
+      "slot_1_morning_short": "Space & Planets \u2014 Hook: Why are Saturns rings disappearing slowly?",
+      "slot_2_midday_long": "Space & Planets \u2014 Episode: Ring World Explorer: Ice and Rock Around Saturn",
+      "slot_3_afternoon_short": "Space & Planets \u2014 Hook: How fast does a shooting star actually travel?",
+      "slot_4_evening_long": "Space & Planets \u2014 Episode: Comets, Asteroids and Meteor Showers Explained"
+    }
+  },
+  {
+    "day": 12,
+    "niche": "Ocean Superpowers",
+    "slots": {
+      "slot_1_morning_short": "Ocean Superpowers \u2014 Hook: How do whales talk across an entire ocean?",
+      "slot_2_midday_long": "Ocean Superpowers \u2014 Episode: Songs of the Blue Whale: Ocean Communication",
+      "slot_3_afternoon_short": "Ocean Superpowers \u2014 Hook: Why do pufferfish blow up like spiky balloons?",
+      "slot_4_evening_long": "Ocean Superpowers \u2014 Episode: Clever Sea Defenses: Octopuses, Crabs and Rays"
+    }
+  },
+  {
+    "day": 13,
+    "niche": "How Machines Work",
+    "slots": {
+      "slot_1_morning_short": "How Machines Work \u2014 Hook: How does a rocket escape Earths gravity?",
+      "slot_2_midday_long": "How Machines Work \u2014 Episode: Countdown to Orbit: How Space Rockets Work",
+      "slot_3_afternoon_short": "How Machines Work \u2014 Hook: Why do magnets push away and snap together?",
+      "slot_4_evening_long": "How Machines Work \u2014 Episode: Invisible Forces: Magnetism and Gravity Lab"
+    }
+  },
+  {
+    "day": 14,
+    "niche": "Visual Math Magic",
+    "slots": {
+      "slot_1_morning_short": "Visual Math Magic \u2014 Hook: What is a googol and is it bigger than space?",
+      "slot_2_midday_long": "Visual Math Magic \u2014 Episode: Big Numbers Adventure: From 100 to Infinity",
+      "slot_3_afternoon_short": "Visual Math Magic \u2014 Hook: Can you split 12 space cookies equally 4 ways?",
+      "slot_4_evening_long": "Visual Math Magic \u2014 Episode: Division and Sharing Fairly at Pips Space Cafe"
+    }
+  },
+  {
+    "day": 15,
+    "niche": "Dinosaur Science",
+    "slots": {
+      "slot_1_morning_short": "Dinosaur Science \u2014 Hook: How fast could a Velociraptor really run?",
+      "slot_2_midday_long": "Dinosaur Science \u2014 Episode: Dino Trackers: Clues from Ancient Footprints",
+      "slot_3_afternoon_short": "Dinosaur Science \u2014 Hook: Which ocean reptile ruled the Jurassic seas?",
+      "slot_4_evening_long": "Dinosaur Science \u2014 Episode: Monsters of the Ancient Ocean: Plesiosaurs"
+    }
+  },
+  {
+    "day": 16,
+    "niche": "Space & Planets",
+    "slots": {
+      "slot_1_morning_short": "Space & Planets \u2014 Hook: Why is Mars bright red like rusty iron?",
+      "slot_2_midday_long": "Space & Planets \u2014 Episode: Rover Mission Mars: Searching for Ancient Water",
+      "slot_3_afternoon_short": "Space & Planets \u2014 Hook: How hot is the center of our Sun?",
+      "slot_4_evening_long": "Space & Planets \u2014 Episode: Solar Powerhouse: How the Sun Keeps Earth Alive"
+    }
+  },
+  {
+    "day": 17,
+    "niche": "Animal Mysteries",
+    "slots": {
+      "slot_1_morning_short": "Animal Mysteries \u2014 Hook: How do bats see in total darkness with sound?",
+      "slot_2_midday_long": "Animal Mysteries \u2014 Episode: Night Shift Nature: Owls, Bats and Fireflies",
+      "slot_3_afternoon_short": "Animal Mysteries \u2014 Hook: Why do penguins wear built-in tuxedos?",
+      "slot_4_evening_long": "Animal Mysteries \u2014 Episode: Polar Survival: Life in Antarctica and the Arctic"
+    }
+  },
+  {
+    "day": 18,
+    "niche": "How Machines Work",
+    "slots": {
+      "slot_1_morning_short": "How Machines Work \u2014 Hook: How does a roller coaster loop without falling?",
+      "slot_2_midday_long": "How Machines Work \u2014 Episode: Physics at the Theme Park: Loops and Speed",
+      "slot_3_afternoon_short": "How Machines Work \u2014 Hook: How do satellites beam maps to your phone?",
+      "slot_4_evening_long": "How Machines Work \u2014 Episode: Eyes in the Sky: How Satellites Help Earth"
+    }
+  },
+  {
+    "day": 19,
+    "niche": "Visual Math Magic",
+    "slots": {
+      "slot_1_morning_short": "Visual Math Magic \u2014 Hook: What clock time is it when both hands overlap?",
+      "slot_2_midday_long": "Visual Math Magic \u2014 Episode: Time Travelers: Mastering Clocks and Minutes",
+      "slot_3_afternoon_short": "Visual Math Magic \u2014 Hook: Can you spot the missing number in Pips vault?",
+      "slot_4_evening_long": "Visual Math Magic \u2014 Episode: Code Breakers: Number Sequences and Logic"
+    }
+  },
+  {
+    "day": 20,
+    "niche": "Dinosaur Science",
+    "slots": {
+      "slot_1_morning_short": "Dinosaur Science \u2014 Hook: What caused the dinosaurs to vanish 66M years ago?",
+      "slot_2_midday_long": "Dinosaur Science \u2014 Episode: The Asteroid Mystery and How Birds Survived",
+      "slot_3_afternoon_short": "Dinosaur Science \u2014 Hook: Which dinosaur had 500 replaceable teeth?",
+      "slot_4_evening_long": "Dinosaur Science \u2014 Episode: Dino Dentists: What Teeth Tell Us About Dino Diets"
+    }
+  },
+  {
+    "day": 21,
+    "niche": "Space & Planets",
+    "slots": {
+      "slot_1_morning_short": "Space & Planets \u2014 Hook: Why does one day on Venus last longer than its year?",
+      "slot_2_midday_long": "Space & Planets \u2014 Episode: Twin Planets Gone Wild: Earth vs Venus",
+      "slot_3_afternoon_short": "Space & Planets \u2014 Hook: What is a black hole and can light escape it?",
+      "slot_4_evening_long": "Space & Planets \u2014 Episode: Gravity Giants: Stars, Nebulas and Black Holes"
+    }
+  },
+  {
+    "day": 22,
+    "niche": "Ocean Superpowers",
+    "slots": {
+      "slot_1_morning_short": "Ocean Superpowers \u2014 Hook: How can an electric eel shock its prey?",
+      "slot_2_midday_long": "Ocean Superpowers \u2014 Episode: Glow-in-the-Dark Ocean: Bioluminescent Creatures",
+      "slot_3_afternoon_short": "Ocean Superpowers \u2014 Hook: Why is ocean water salty while rivers are fresh?",
+      "slot_4_evening_long": "Ocean Superpowers \u2014 Episode: The Water Cycle Express: From Cloud to Ocean"
+    }
+  },
+  {
+    "day": 23,
+    "niche": "How Machines Work",
+    "slots": {
+      "slot_1_morning_short": "How Machines Work \u2014 Hook: How do giant wind turbines turn breeze into power?",
+      "slot_2_midday_long": "How Machines Work \u2014 Episode: Clean Energy Island: Wind, Sun and Water Power",
+      "slot_3_afternoon_short": "How Machines Work \u2014 Hook: Why do trains stay on metal tracks around curves?",
+      "slot_4_evening_long": "How Machines Work \u2014 Episode: Wheels, Gears and Simple Machines with Leo"
+    }
+  },
+  {
+    "day": 24,
+    "niche": "Visual Math Magic",
+    "slots": {
+      "slot_1_morning_short": "Visual Math Magic \u2014 Hook: How do honeybees build perfect hexagons?",
+      "slot_2_midday_long": "Visual Math Magic \u2014 Episode: Natures Architects: Why Hexagons Are Strongest",
+      "slot_3_afternoon_short": "Visual Math Magic \u2014 Hook: Can you measure a tall tree using its shadow?",
+      "slot_4_evening_long": "Visual Math Magic \u2014 Episode: Measurement Quest: Inches, Feet and Miles"
+    }
+  },
+  {
+    "day": 25,
+    "niche": "Dinosaur Science",
+    "slots": {
+      "slot_1_morning_short": "Dinosaur Science \u2014 Hook: Which armored dinosaur had a club tail like a hammer?",
+      "slot_2_midday_long": "Dinosaur Science \u2014 Episode: Tank Dinosaurs: Ankylosaurus and Triceratops",
+      "slot_3_afternoon_short": "Dinosaur Science \u2014 Hook: How big was a baby Brachiosaurus when it hatched?",
+      "slot_4_evening_long": "Dinosaur Science \u2014 Episode: Gentle Giants: Growing Up in a Sauropod Herd"
+    }
+  },
+  {
+    "day": 26,
+    "niche": "Space & Planets",
+    "slots": {
+      "slot_1_morning_short": "Space & Planets \u2014 Hook: How do astronauts sleep and brush teeth in space?",
+      "slot_2_midday_long": "Space & Planets \u2014 Episode: A Day Aboard the International Space Station",
+      "slot_3_afternoon_short": "Space & Planets \u2014 Hook: Why is Pluto called a dwarf planet today?",
+      "slot_4_evening_long": "Space & Planets \u2014 Episode: Edge of the Solar System: Pluto and Kuiper Belt"
+    }
+  },
+  {
+    "day": 27,
+    "niche": "Animal Mysteries",
+    "slots": {
+      "slot_1_morning_short": "Animal Mysteries \u2014 Hook: How can ants lift 50 times their own body weight?",
+      "slot_2_midday_long": "Animal Mysteries \u2014 Episode: Tiny Teamwork: Inside an Underground Ant City",
+      "slot_3_afternoon_short": "Animal Mysteries \u2014 Hook: Why do monarch butterflies migrate 3000 miles?",
+      "slot_4_evening_long": "Animal Mysteries \u2014 Episode: Great Animal Migrations Across North America"
+    }
+  },
+  {
+    "day": 28,
+    "niche": "How Machines Work",
+    "slots": {
+      "slot_1_morning_short": "How Machines Work \u2014 Hook: How does a 3D printer build toys layer by layer?",
+      "slot_2_midday_long": "How Machines Work \u2014 Episode: Future Makers Lab: Robots and 3D Printing",
+      "slot_3_afternoon_short": "How Machines Work \u2014 Hook: Why do boats made of heavy steel float on water?",
+      "slot_4_evening_long": "How Machines Work \u2014 Episode: Sink or Float? Buoyancy Experiments with Pip"
+    }
+  },
+  {
+    "day": 29,
+    "niche": "Visual Math Magic",
+    "slots": {
+      "slot_1_morning_short": "Visual Math Magic \u2014 Hook: What happens when you fold a paper 42 times?",
+      "slot_2_midday_long": "Visual Math Magic \u2014 Episode: Exponential Power: How Things Grow Super Fast",
+      "slot_3_afternoon_short": "Visual Math Magic \u2014 Hook: Can you balance Leos mystery weight scale?",
+      "slot_4_evening_long": "Visual Math Magic \u2014 Episode: Algebra for Kids: Solving Mystery Boxes"
+    }
+  },
+  {
+    "day": 30,
+    "niche": "Mega Finale",
+    "slots": {
+      "slot_1_morning_short": "Mega Finale \u2014 Hook: Top 3 Mind-Blowing Science Facts from Month 1!",
+      "slot_2_midday_long": "Mega Finale \u2014 Episode: Grand Science Quiz Championship with Leo and Pip",
+      "slot_3_afternoon_short": "Mega Finale \u2014 Hook: Can you guess the secret Season 2 planet?",
+      "slot_4_evening_long": "Mega Finale \u2014 Episode: Graduation Celebration: Young Explorer Awards"
+    }
+  }
+]

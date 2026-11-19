@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Humanity Nepal AI — Learn AI & Coding</title>
+  <meta name="description" content="Free educational platform for students and humanity. Learn AI, coding, and upgrade your life.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <span class="logo-icon">🎓</span>
+        <span class="logo-text">Humanity Nepal <span class="logo-accent">AI</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="#courses" class="nav-link">Courses</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#tutor" class="nav-link nav-cta">AI Tutor 💬</a>
+      </div>
+      <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">🇳🇵 Free Education for Everyone</div>
+      <h1 class="hero-title">Upgrade Your Life with <span class="gradient-text">AI & Coding</span></h1>
+      <p class="hero-subtitle">Learn artificial intelligence, programming, and technology skills — completely free. Built for students and humanity in Nepal and beyond.</p>
+      <div class="hero-actions">
+        <a href="#courses" class="btn btn-primary">Start Learning →</a>
+        <a href="#tutor" class="btn btn-secondary">Ask AI Tutor</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">3</span><span class="stat-label">Courses</span></div>
+        <div class="stat"><span class="stat-num">10</span><span class="stat-label">Lessons</span></div>
+        <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Possibilities</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="floating-card card-1">🤖 AI Fundamentals</div>
+      <div class="floating-card card-2">⚡ JavaScript</div>
+      <div class="floating-card card-3">🐍 Python</div>
+      <div class="floating-orb"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2 class="section-title">Our Mission</h2>
+    <p class="section-subtitle">Empowering students and communities through free, accessible technology education.</p>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-icon">📚</div>
+        <h3>Learn Anywhere</h3>
+        <p>Access courses from any device, anywhere in the world. No barriers to education.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">🤖</div>
+        <h3>AI-Powered Learning</h3>
+        <p>Get instant help from our AI tutor. Ask questions, get explanations, and learn at your own pace.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">🆓</div>
+        <h3>100% Free</h3>
+        <p>Education is a right, not a privilege. All courses and tools are completely free.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">🌍</div>
+        <h3>For Humanity</h3>
+        <p>Building a world where everyone has the skills to create, innovate, and thrive.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="courses" id="courses">
+    <h2 class="section-title">Learning Paths</h2>
+    <p class="section-subtitle">Choose your journey and start building skills today.</p>
+    <div class="course-grid" id="courseGrid">
+      <!-- Courses loaded dynamically -->
+      <div class="loading">Loading courses...</div>
+    </div>
+  </section>
+
+  <!-- Lesson Modal -->
+  <div class="modal-overlay" id="lessonModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeLesson()">✕</button>
+      <div class="modal-header">
+        <span class="modal-course-icon" id="modalCourseIcon"></span>
+        <div>
+          <h2 class="modal-title" id="modalTitle"></h2>
+          <p class="modal-meta" id="modalMeta"></p>
+        </div>
+      </div>
+      <div class="lesson-nav" id="lessonNav"></div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="completeBtn" onclick="completeLesson()">✓ Mark as Complete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Tutor Section -->
+  <section class="tutor-section" id="tutor">
+    <h2 class="section-title">AI Tutor</h2>
+    <p class="section-subtitle">Ask anything about AI, coding, or technology. Your personal AI teacher is here 24/7.</p>
+    <div class="chat-container">
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-message bot">
+          <div class="chat-avatar">🤖</div>
+          <div class="chat-bubble">
+            <p>Namaste! 🙏 I'm your AI tutor. I can help you learn:</p>
+            <ul>
+              <li>🤖 Artificial Intelligence concepts</li>
+              <li>⚡ JavaScript & web development</li>
+              <li>🐍 Python programming</li>
+              <li>💡 Career advice in tech</li>
+            </ul>
+            <p>What would you like to learn today?</p>
+          </div>
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <div class="chat-suggestions">
+          <button class="suggestion-chip" onclick="sendSuggestion('What is machine learning?')">What is ML?</button>
+          <button class="suggestion-chip" onclick="sendSuggestion('How do I write a function in JavaScript?')">JS functions</button>
+          <button class="suggestion-chip" onclick="sendSuggestion('Explain Python variables')">Python basics</button>
+        </div>
+        <form class="chat-form" onsubmit="sendMessage(event)">
+          <input type="text" id="chatInput" placeholder="Ask your AI tutor anything..." autocomplete="off">
+          <button type="submit" class="chat-send">Send ➤</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="logo-icon">🎓</span>
+        <span>Humanity Nepal AI</span>
+      </div>
+      <p class="footer-tagline">Education for all. Powered by Cloudflare.</p>
+      <div class="footer-links">
+        <a href="#courses">Courses</a>
+        <a href="#about">About</a>
+        <a href="#tutor">AI Tutor</a>
+      </div>
+      <p class="footer-copy">© 2026 Humanity Nepal AI. Built with ❤️ for students everywhere.</p>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

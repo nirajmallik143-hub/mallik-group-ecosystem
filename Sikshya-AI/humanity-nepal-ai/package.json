@@ -1,0 +1,15 @@
+{
+  "name": "humanity-nepal-ai",
+  "version": "1.0.0",
+  "description": "Free educational platform for learning AI and coding — built for students and humanity.",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:create": "wrangler d1 create humanity_nepal_ai",
+    "db:init": "wrangler d1 execute humanity_nepal_ai --file=./src/schema.sql"
+  },
+  "keywords": ["education", "ai", "coding", "nepal", "learning", "cloudflare-workers"],
+  "author": "Humanity Nepal AI",
+  "license": "MIT"
+}

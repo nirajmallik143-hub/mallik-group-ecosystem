@@ -1,0 +1,18 @@
+name = "humanity-nepal-ai"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+
+# Workers AI binding for the AI tutor chatbot
+[ai]
+binding = "AI"
+
+# Static assets for the frontend
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+# D1 database for storing lessons, courses, and student progress
+[[d1_databases]]
+binding = "DB"
+database_name = "humanity_nepal_ai"
+database_id = "placeholder-create-database-first"
