@@ -139,8 +139,47 @@ print(len(items))</textarea>
       }
     }
 
+    // Paste your Lemon Squeezy / Stripe Payment Links here once created:
+    const PAYMENT_LINKS = {
+      "Pro - $9/mo (33 AED)": "",
+      "Enterprise ESG - $29/mo (107 AED)": ""
+    };
+
     function subscribePlan(planName) {
-      alert("Checkout initialized for " + planName + ".\n\nConnect your Stripe UAE / Lemon Squeezy Payment Link in EcoThread/public/index.html to receive payouts directly to your Mbank UAE IBAN.");
+      const url = PAYMENT_LINKS[planName];
+      if (url && url.startsWith("https://")) {
+        window.open(url, "_blank");
+        return;
+      }
+      const existing = document.getElementById("payModal");
+      if (existing) existing.remove();
+
+      const modal = document.createElement("div");
+      modal.id = "payModal";
+      modal.className = "fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50";
+      modal.innerHTML = `
+        <div class="bg-slate-900 border border-emerald-500/40 rounded-2xl max-w-md w-full p-6 text-slate-100 shadow-2xl">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-base font-extrabold text-emerald-400">Activate ${planName}</h3>
+            <button onclick="document.getElementById('payModal').remove()" class="text-slate-400 hover:text-white text-lg font-bold">&times;</button>
+          </div>
+          <p class="text-xs text-slate-300 mb-4">Instant 18-Digit Pro License Activation &bull; Settled via Mbank UAE &amp; Botim Pay</p>
+
+          <div class="space-y-3 text-xs">
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <div class="font-bold text-emerald-300 mb-1">Option 1: UAE Instant Pay (Botim / Aani)</div>
+              <p class="text-slate-400">Send exact AED amount via Botim Pay / UAE Aani to <span class="text-white font-mono">+971 50 229 7451</span>, then tap below to request your 18-digit key on WhatsApp.</p>
+              <a href="https://wa.me/971502297451?text=Hello%20Niraj%2C%20I%20paid%20for%20EcoThread%20${encodeURIComponent(planName)}.%20Please%20send%20my%2018-digit%20Pro%20Key." target="_blank" class="mt-2 inline-block w-full text-center py-2 rounded-lg bg-emerald-500 text-slate-950 font-extrabold">Confirm Payment &amp; Get 18-Digit Key</a>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <div class="font-bold text-sky-300 mb-1">Option 2: Global Card / Apple Pay</div>
+              <p class="text-slate-400">International card checkout link activates automatically once linked in <code>PAYMENT_LINKS</code>.</p>
+            </div>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modal);
     }
 
     window.addEventListener("DOMContentLoaded", () => {
