@@ -22,26 +22,51 @@ def load_env(env_path):
             if not line or line.startswith("#") or "=" not in line:
                 continue
             k, v = line.split("=", 1)
-            os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+            clean_val = v.strip().strip('"').strip("'").strip()
+            os.environ[k.strip()] = clean_val
 
 load_env(os.path.join(REPO_ROOT, ".env"))
 
 from mallik_key_gateway import MallikGroupKeyGateway
 
-def ask_gemini(prompt: str, api_key: str) -> str:
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
+def ask_ai(prompt: str, gw: MallikGroupKeyGateway) -> str:
     system_instruction = (
         "You are Mallik Group Termux AI Agent built by Niraj Mallik (nirajmallik143-hub). "
-        "Give concise, accurate terminal answers, Python/Bash scripts, and system commands."
+        "Give concise, accurate terminal answers, Python/Bash scripts, and GitHub repo guidance."
     )
-    payload = json.dumps({
-        "contents": [{"parts": [{"text": f"{system_instruction}\n\nUser: {prompt}"}]}]
-    }).encode("utf-8")
 
-    req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
-        return data["candidates"][0]["content"]["parts"][0]["text"]
+    # Primary: Gemini
+    try:
+        gemini_key = gw.get_provider_key("gemini")
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={gemini_key}"
+        payload = json.dumps({
+            "contents": [{"parts": [{"text": f"{system_instruction}\n\nUser: {prompt}"}]}]
+        }).encode("utf-8")
+        req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+            return data["candidates"][0]["content"]["parts"][0]["text"]
+    except urllib.error.HTTPError as e:
+        err_detail = e.read().decode("utf-8", errors="ignore")
+        # Fallback: DeepSeek if configured
+        if "deepseek" in gw.active_providers():
+            ds_key = gw.get_provider_key("deepseek")
+            ds_payload = json.dumps({
+                "model": "deepseek-chat",
+                "messages": [
+                    {"role": "system", "content": system_instruction},
+                    {"role": "user", "content": prompt}
+                ]
+            }).encode("utf-8")
+            ds_req = urllib.request.Request(
+                "https://api.deepseek.com/chat/completions",
+                data=ds_payload,
+                headers={"Content-Type": "application/json", "Authorization": f"Bearer {ds_key}"}
+            )
+            with urllib.request.urlopen(ds_req, timeout=30) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+                return "[DeepSeek Fallback]\n" + data["choices"][0]["message"]["content"]
+        raise RuntimeError(f"HTTP {e.code}: {err_detail}")
 
 def main():
     print("====================================================")
@@ -57,9 +82,8 @@ def main():
         print("[X] Invalid 18-digit Mallik Group Master Key.")
         sys.exit(1)
 
-    gemini_key = gw.get_provider_key("gemini")
     print(f"[✓] Authenticated via 18-Digit Key | Providers: {', '.join(gw.active_providers())}")
-    print("Commands: type your question, '!run <shell_cmd>' to execute, or 'exit' to quit.\n")
+    print("Commands: ask anything, '!repos' to list GitHub repos, '!run <cmd>' for shell, 'exit' to quit.\n")
 
     while True:
         try:
@@ -68,12 +92,16 @@ def main():
                 continue
             if user_input.lower() in ("exit", "quit"):
                 break
+            if user_input.lower() in ("!repos", "search all repo", "list repos"):
+                subprocess.run("gh repo list nirajmallik143-hub --limit 50", shell=True)
+                print()
+                continue
             if user_input.startswith("!run "):
-                cmd = user_input[5:].strip()
-                subprocess.run(cmd, shell=True)
+                subprocess.run(user_input[5:].strip(), shell=True)
+                print()
                 continue
 
-            reply = ask_gemini(user_input, gemini_key)
+            reply = ask_ai(user_input, gw)
             print(f"\n{reply}\n")
         except KeyboardInterrupt:
             print("\nExiting Mallik AI Bot.")
