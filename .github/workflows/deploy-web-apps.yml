@@ -1,0 +1,27 @@
+name: Deploy Web Apps to Vercel
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'Sikshya-AI/**'
+      - 'EcoThread/**'
+
+jobs:
+  deploy-sikshya:
+    if: contains(github.event.head_commit.modified, 'Sikshya-AI/') || contains(github.event.head_commit.added, 'Sikshya-AI/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy Sikshya-AI to Vercel
+        run: npx --yes vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --yes
+        working-directory: ./Sikshya-AI
+
+  deploy-ecothread:
+    if: contains(github.event.head_commit.modified, 'EcoThread/') || contains(github.event.head_commit.added, 'EcoThread/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy EcoThread to Vercel
+        run: npx --yes vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --yes
+        working-directory: ./EcoThread

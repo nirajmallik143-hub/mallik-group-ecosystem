@@ -1,0 +1,30 @@
+name: Daily Automated Video Pipelines
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # Runs daily at 06:00 AM GST (02:00 UTC)
+  workflow_dispatch:
+
+jobs:
+  run-pipelines:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python & FFmpeg
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Install Dependencies
+        run: |
+          pip install google-genai openai anthropic requests
+      - name: Execute Yummy Studio & USA-auto Pipelines
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          if [ -f "Yummy-Studio-Automation/main.py" ]; then python Yummy-Studio-Automation/main.py; fi
+          if [ -f "USA-auto/main.py" ]; then python USA-auto/main.py; fi

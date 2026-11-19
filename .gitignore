@@ -1,0 +1,12 @@
+.env
+.env.*
+*.log
+__pycache__/
+*.pyc
+node_modules/
+.vercel/
+dist/
+*.mp4
+*.mp3
+*.wav
+.DS_Store
