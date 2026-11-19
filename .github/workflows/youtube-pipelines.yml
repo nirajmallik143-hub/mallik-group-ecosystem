@@ -36,4 +36,4 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         run: |
           python Yummy-Studio-Automation/full_pipeline.py
-          printf "1\n" | python USA-auto/usa_viral_cartoon_engine.py
+          printf "1\n\n" | python USA-auto/usa_viral_cartoon_engine.py
