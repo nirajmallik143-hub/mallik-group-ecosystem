@@ -18,15 +18,6 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install google-genai openai anthropic requests pillow edge-tts google-api-python-client google-auth-oauthlib google-auth-httplib2
-      - name: Restore YouTube OAuth Tokens
-        env:
-          TOKEN_NIRAJMALLIK143: ${{ secrets.TOKEN_NIRAJMALLIK143 }}
-          TOKEN_DRREWAPAX: ${{ secrets.TOKEN_DRREWAPAX }}
-          USA_AUTO_TOKEN: ${{ secrets.USA_AUTO_TOKEN }}
-        run: |
-          [ -n "$TOKEN_NIRAJMALLIK143" ] && printf '%s' "$TOKEN_NIRAJMALLIK143" > token_nirajmallik143.json || true
-          [ -n "$TOKEN_DRREWAPAX" ] && printf '%s' "$TOKEN_DRREWAPAX" > token_drrewapax.json || true
-          [ -n "$USA_AUTO_TOKEN" ] && printf '%s' "$USA_AUTO_TOKEN" > USA-auto/token.json || true
       - name: Execute Yummy Studio & USA-auto Pipelines
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -36,4 +27,4 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         run: |
           python Yummy-Studio-Automation/full_pipeline.py
-          printf "1\n\n" | python USA-auto/usa_viral_cartoon_engine.py
+          printf '1\n\n' | python USA-auto/usa_viral_cartoon_engine.py
