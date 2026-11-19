@@ -1,81 +1,75 @@
-# Copyright (c) 2026 Niraj Mallik (Mallik Group)
-import json, os, requests
-from flask import Flask, render_template, request, jsonify
+# Copyright (c) 2026 Niraj Mallik (Mallik Group / nirajmallik143-hub)
+# Licensed under the MIT License.
 
-app = Flask(__name__)
-ENV_KEY = os.environ.get("GEMINI_API_KEY", "")
-MODEL_ID = "gemini-2.5-flash"
-LANGS = [
-    "Nepali (नेपाली)", "Maithili (मैथिली)", "Bhojpuri (भोजपुरी)",
-    "Newari (नेपाल भाषा)", "Tamang (तामाङ)", "Tharu (थारू)",
-    "Limbu (लिम्बू)", "Hindi (हिन्दी)", "English"
-]
+import os
+import sys
+import subprocess
+from flask import Flask, request, jsonify, send_from_directory
+from dotenv import load_dotenv
 
-def call_gemini(sys_instruction, user_text, api_key):
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL_ID}:generateContent?key={api_key}"
-    payload = {
-        "system_instruction": {"parts": [{"text": sys_instruction}]},
-        "contents": [{"parts": [{"text": user_text}]}],
-        "generationConfig": {"responseMimeType": "application/json"}
-    }
-    r = requests.post(url, json=payload, timeout=30)
-    if r.status_code != 200:
-        raise Exception(f"API Error {r.status_code}: {r.text}")
-    data = r.json()
-    text = data["candidates"][0]["content"]["parts"][0]["text"]
-    return json.loads(text)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(BASE_DIR)
+sys.path.insert(0, os.path.join(REPO_ROOT, "Mallik-Core-Agents"))
+
+load_dotenv(os.path.join(REPO_ROOT, ".env"))
+
+from mallik_key_gateway import MallikGroupKeyGateway
+
+app = Flask(__name__, static_folder="public", static_url_path="")
 
 @app.route("/")
 def index():
-    return render_template("index.html", languages=LANGS, has_key=bool(ENV_KEY))
+    return send_from_directory(app.static_folder, "index.html")
 
-@app.route("/v1/reason", methods=["POST"])
-def reason():
-    d = request.get_json(force=True)
-    prompt = d.get("prompt", "")
-    lang = d.get("language", "Nepali")
-    domain = d.get("domain", "Civic")
-    key = d.get("api_key", "").strip() or ENV_KEY
-    if not key:
-        return jsonify({
-            "plan": "Paste your Gemini API Key in the box above.",
-            "act": "Checked API key configuration.",
-            "verify": "No API key found yet.",
-            "deliver": "Get a free key at aistudio.google.com, paste it above, and tap Execute again.",
-            "canvas_title": "API Key Required",
-            "canvas_content": "1. Visit https://aistudio.google.com/apikey\n2. Create a Gemini API key\n3. Paste it into the API Key field above"
-        })
-    try:
-        sys_msg = (
-            f"You are Humanity Nepal AI (Mallik Group). Respond in {lang} on {domain}. "
-            "Return ONLY JSON with keys: plan, act, verify, deliver, canvas_title, canvas_content."
-        )
-        return jsonify(call_gemini(sys_msg, prompt, key))
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+@app.route("/api/verify-key", methods=["POST"])
+def verify_key():
+    client_key = request.headers.get("X-Mallik-Key", "")
+    gw = MallikGroupKeyGateway(client_key)
+    if not gw.validate():
+        return jsonify({"valid": False, "error": "Invalid 18-digit Mallik Group key"}), 401
+    return jsonify({"valid": True, "providers": gw.active_providers()})
 
-@app.route("/v1/sos", methods=["POST"])
-def sos():
-    d = request.get_json(force=True)
-    alert = d.get("alert", "")
-    loc = d.get("location", "Nepal")
-    lang = d.get("language", "Nepali")
-    key = d.get("api_key", "").strip() or ENV_KEY
-    if not key:
-        return jsonify({
-            "severity": "CRITICAL",
-            "incident_type": "SOS",
-            "guidance_local": "Alert AJS Security & Shivasatakshi Hub. (Paste API key for AI triage)",
-            "broadcast_bulletin": f"[SOS - {loc}] {alert}"
-        })
+@app.route("/api/git-status", methods=["GET"])
+def git_status():
+    client_key = request.headers.get("X-Mallik-Key", "")
+    gw = MallikGroupKeyGateway(client_key)
+    if not gw.validate():
+        return jsonify({"error": "Unauthorized 18-digit key"}), 401
     try:
-        sys_msg = (
-            "Mallik Group SOS Triage. Return ONLY JSON with keys: "
-            "severity, incident_type, guidance_local, broadcast_bulletin."
-        )
-        return jsonify(call_gemini(sys_msg, f"Loc: {loc}, Lang: {lang}, Alert: {alert}", key))
+        branch = subprocess.check_output(["git", "rev-parse", "--abbrev-ref", "HEAD"], cwd=REPO_ROOT).decode().strip()
+        commit = subprocess.check_output(["git", "log", "-1", "--pretty=%h - %s"], cwd=REPO_ROOT).decode().strip()
+        return jsonify({"status": f"Branch: {branch} | Latest Commit: {commit}"})
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        return jsonify({"status": f"Repository active ({str(e)})"})
+
+@app.route("/api/ask", methods=["POST"])
+def ask():
+    client_key = request.headers.get("X-Mallik-Key", "")
+    gw = MallikGroupKeyGateway(client_key)
+    if not gw.validate():
+        return jsonify({"error": "Access denied: Valid 18-digit Mallik Group API Key required."}), 401
+
+    data = request.get_json(force=True)
+    prompt = data.get("prompt", "").strip()
+    mode = data.get("mode", "tutor")
+
+    system_prompts = {
+        "tutor": "You are Sikshya Global AI by Mallik Group. Give clear, structured educational answers.",
+        "medical": "You are LiveLife OS Medical & Respiratory Triage. Provide structured educational triage guidance and advise consulting a licensed clinician for emergencies.",
+        "quantum": "You are Mallik Group Quantum & Code Sandbox. Provide clean, production-ready code and scientific explanations."
+    }
+
+    try:
+        gemini_key = gw.get_provider_key("gemini")
+        from google import genai
+        client = genai.Client(api_key=gemini_key)
+        response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=f"{system_prompts.get(mode, system_prompts['tutor'])}\n\nUser: {prompt}"
+        )
+        return jsonify({"reply": response.text, "provider": "Mallik-Gemini-Core"})
+    except Exception as e:
+        return jsonify({"reply": f"Gateway authenticated via 18-digit key. Backend notice: {str(e)}", "provider": "Mallik-Gateway"})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=8080, debug=False)
