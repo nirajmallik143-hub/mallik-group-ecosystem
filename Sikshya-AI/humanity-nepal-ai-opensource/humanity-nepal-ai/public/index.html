@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Humanity Nepal AI — Learn AI, Coding, Automation & Technology</title>
+  <meta name="description" content="Free educational platform for humanity. Learn AI, coding, automation, and technology. Problem + Solve = Success | Think = Do">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <span class="logo-icon">🎓</span>
+        <span class="logo-text">Humanity Nepal <span class="logo-accent">AI</span></span>
+      </a>
+      <div class="nav-search">
+        <input type="text" id="searchInput" placeholder="Search courses..." autocomplete="off">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#courses" class="nav-link">Courses</a>
+        <a href="#framework" class="nav-link">Framework</a>
+        <a href="#challenges" class="nav-link">Challenges</a>
+        <a href="#roadmap" class="nav-link">Roadmap</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#tutor" class="nav-link nav-cta">AI Tutor 💬</a>
+        <a href="#profile" class="nav-link">Profile</a>
+        <button class="theme-toggle" onclick="toggleTheme()" title="Dark mode">🌙</button>
+        <div class="lang-selector">
+          <button class="lang-toggle" onclick="toggleLangMenu()" title="Select your language" id="langBtn">🌐 EN</button>
+          <div class="lang-dropdown" id="langDropdown"></div>
+        </div>
+      </div>
+      <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">🇳🇵 Free Education for Everyone</div>
+      <h1 class="hero-title">Upgrade Your Life with <span class="gradient-text">AI, Coding & Technology</span></h1>
+      <p class="hero-subtitle">Learn AI, coding, automation, and technology — completely free. Built for students and humanity. Solve real problems and achieve success.</p>
+      <div class="hero-philosophy">
+        <span class="philosophy-item">💡 Problem + Solve = Success</span>
+        <span class="philosophy-divider">|</span>
+        <span class="philosophy-item">🧠 Think = Do</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#courses" class="btn btn-primary">Start Learning →</a>
+        <a href="#tutor" class="btn btn-secondary">Ask AI Tutor</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" id="courseCount">10</span><span class="stat-label">Courses</span></div>
+        <div class="stat"><span class="stat-num" id="lessonCount">40+</span><span class="stat-label">Lessons</span></div>
+        <div class="stat"><span class="stat-num" id="challengeCount">12</span><span class="stat-label">Challenges</span></div>
+        <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Possibilities</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="floating-card card-1">🤖 AI</div>
+      <div class="floating-card card-2">⚡ JavaScript</div>
+      <div class="floating-card card-3">🐍 Python</div>
+      <div class="floating-card card-4">⚙️ Automation</div>
+      <div class="floating-card card-5">📊 Data</div>
+      <div class="floating-orb"></div>
+    </div>
+  </section>
+
+  <!-- Welcome Banner -->
+  <section class="welcome-banner" id="welcomeBanner" style="display:none;">
+    <div class="welcome-content">
+      <span id="welcomeText">Welcome back!</span>
+      <div class="welcome-stats">
+        <span id="userPoints">0 points</span>
+        <span id="userProgress">0 lessons completed</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem-Solve-Success Framework -->
+  <section class="framework-section" id="framework">
+    <h2 class="section-title">The Success Framework</h2>
+    <p class="section-subtitle">Problem + Solve = Success | Think = Do — The core philosophy of Humanity Nepal AI</p>
+    <div class="framework-flow">
+      <div class="framework-step">
+        <div class="framework-icon">🔴</div>
+        <h3>1. Problem</h3>
+        <p>Identify a real problem in your life or community</p>
+      </div>
+      <div class="framework-arrow">→</div>
+      <div class="framework-step">
+        <div class="framework-icon">🧠</div>
+        <h3>2. Think</h3>
+        <p>Think deeply about possible solutions</p>
+      </div>
+      <div class="framework-arrow">→</div>
+      <div class="framework-step">
+        <div class="framework-icon">⚙️</div>
+        <h3>3. Do</h3>
+        <p>Take action. Build the solution.</p>
+      </div>
+      <div class="framework-arrow">→</div>
+      <div class="framework-step">
+        <div class="framework-icon">🏆</div>
+        <h3>4. Success</h3>
+        <p>Solve the problem. Upgrade your life.</p>
+      </div>
+    </div>
+    <div class="framework-quote">
+      <p>"Every great achievement started with someone who saw a problem, thought about it, and took action. You have that power too."</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <h2 class="section-title">Our Mission</h2>
+    <p class="section-subtitle">Empowering students and communities through free, accessible technology education.</p>
+    <div class="about-grid">
+      <div class="about-card"><div class="about-icon">📚</div><h3>Learn Anywhere</h3><p>Access courses from any device, anywhere. No barriers to education.</p></div>
+      <div class="about-card"><div class="about-icon">🤖</div><h3>AI-Powered Learning</h3><p>Get instant help from our AI tutor. Learn at your own pace.</p></div>
+      <div class="about-card"><div class="about-icon">🆓</div><h3>100% Free</h3><p>Education is a right, not a privilege. Everything is free.</p></div>
+      <div class="about-card"><div class="about-icon">🏆</div><h3>Earn Certificates</h3><p>Complete courses, pass quizzes, earn certificates.</p></div>
+      <div class="about-card"><div class="about-icon">⚙️</div><h3>Learn Automation</h3><p>Automate tasks and save time. Multiply your impact.</p></div>
+      <div class="about-card"><div class="about-icon">💡</div><h3>Solve Problems</h3><p>Use technology to solve real problems in your community.</p></div>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section class="courses" id="courses">
+    <h2 class="section-title">Learning Paths</h2>
+    <p class="section-subtitle">10 courses covering AI, coding, automation, data science, cybersecurity, and more.</p>
+    <div class="course-grid" id="courseGrid">
+      <div class="loading">Loading courses...</div>
+    </div>
+  </section>
+
+  <!-- Daily Challenges -->
+  <section class="challenges-section" id="challenges">
+    <h2 class="section-title">Daily Challenges</h2>
+    <p class="section-subtitle">Think = Do. Complete challenges to earn points and build skills. New challenges every day!</p>
+    <div class="challenge-grid" id="challengeGrid">
+      <div class="loading">Loading challenges...</div>
+    </div>
+  </section>
+
+  <!-- Life Upgrade Roadmap -->
+  <section class="roadmap-section" id="roadmap">
+    <h2 class="section-title">Life Upgrade Roadmap</h2>
+    <p class="section-subtitle">Your step-by-step journey from beginner to tech professional.</p>
+    <div class="roadmap-container" id="roadmapContainer">
+      <div class="loading">Loading roadmap...</div>
+    </div>
+  </section>
+
+  <!-- Leaderboard -->
+  <section class="leaderboard-section" id="leaderboard">
+    <h2 class="section-title">Leaderboard</h2>
+    <p class="section-subtitle">Top learners. Earn points by completing lessons, quizzes, and challenges!</p>
+    <div class="leaderboard-container">
+      <div class="leaderboard-podium" id="leaderboardPodium"></div>
+      <div class="leaderboard-list" id="leaderboardList">
+        <div class="loading">Loading leaderboard...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Showcase -->
+  <section class="projects-section" id="projects">
+    <h2 class="section-title">Project Showcase</h2>
+    <p class="section-subtitle">See what students have built. Share your own projects to inspire others!</p>
+    <button class="btn btn-primary" onclick="showProjectForm()" style="margin: 0 auto 32px; display:flex;">+ Submit Your Project</button>
+    <div class="project-grid" id="projectGrid">
+      <div class="loading">Loading projects...</div>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section class="resources-section" id="resources">
+    <h2 class="section-title">Resources Library</h2>
+    <p class="section-subtitle">Free tools and learning resources to help you on your journey.</p>
+    <div class="resource-grid" id="resourceGrid">
+      <div class="loading">Loading resources...</div>
+    </div>
+  </section>
+
+  <!-- Profile -->
+  <section class="profile-section" id="profile">
+    <h2 class="section-title">Your Profile</h2>
+    <div class="profile-card">
+      <div class="profile-header">
+        <div class="profile-avatar" id="profileAvatar">👤</div>
+        <div class="profile-info">
+          <h3 id="profileName">Student</h3>
+          <p id="profileCountry">Nepal</p>
+          <div class="profile-level" id="profileLevel">Level 1</div>
+        </div>
+      </div>
+      <div class="profile-stats">
+        <div class="profile-stat"><span class="profile-stat-num" id="profilePoints">0</span><span class="profile-stat-label">Points</span></div>
+        <div class="profile-stat"><span class="profile-stat-num" id="profileCompleted">0</span><span class="profile-stat-label">Lessons</span></div>
+        <div class="profile-stat"><span class="profile-stat-num" id="profileQuizzes">0</span><span class="profile-stat-label">Quizzes</span></div>
+        <div class="profile-stat"><span class="profile-stat-num" id="profileChallenges">0</span><span class="profile-stat-label">Challenges</span></div>
+      </div>
+      <div class="certificates" id="certificates">
+        <h4>Certificates</h4>
+        <p class="empty-state">Complete all lessons in a course to earn a certificate.</p>
+      </div>
+      <button class="btn btn-secondary" onclick="editProfile()">Edit Profile</button>
+    </div>
+  </section>
+
+  <!-- Lesson Modal -->
+  <div class="modal-overlay" id="lessonModal">
+    <div class="modal lesson-modal">
+      <button class="modal-close" onclick="closeLesson()">✕</button>
+      <div class="modal-header">
+        <span class="modal-course-icon" id="modalCourseIcon"></span>
+        <div><h2 class="modal-title" id="modalTitle"></h2><p class="modal-meta" id="modalMeta"></p></div>
+      </div>
+      <div class="lesson-nav" id="lessonNav"></div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="quiz-section" id="quizSection" style="display:none;">
+        <h3 class="quiz-title">Test Your Knowledge</h3>
+        <div id="quizContainer"></div>
+        <button class="btn btn-primary" id="submitQuizBtn" onclick="submitQuiz()">Submit Quiz</button>
+        <div class="quiz-result" id="quizResult"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="prevLessonBtn" onclick="prevLesson()">← Previous</button>
+        <button class="btn btn-primary" id="completeBtn" onclick="completeLesson()">✓ Mark as Complete</button>
+        <button class="btn btn-primary" id="nextLessonBtn" onclick="nextLesson()">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Tutor -->
+  <section class="tutor-section" id="tutor">
+    <h2 class="section-title">AI Tutor</h2>
+    <p class="section-subtitle">Ask anything about AI, coding, automation, or technology. Your personal AI teacher is here 24/7.</p>
+    <div class="chat-container">
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-message bot">
+          <div class="chat-avatar">🤖</div>
+          <div class="chat-bubble">
+            <p>Namaste! 🙏 I'm your AI tutor. I can help you learn:</p>
+            <ul><li>🤖 Artificial Intelligence & Machine Learning</li><li>⚡ JavaScript & Web Development</li><li>🐍 Python Programming</li><li>⚙️ Automation & No-Code Tools</li><li>📊 Data Science</li><li>🔒 Cybersecurity</li><li>💡 Problem Solving</li></ul>
+            <p>Remember: <strong>Problem + Solve = Success | Think = Do</strong>. What would you like to learn today?</p>
+          </div>
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <div class="chat-suggestions">
+          <button class="suggestion-chip" onclick="sendSuggestion('What is machine learning?')">What is ML?</button>
+          <button class="suggestion-chip" onclick="sendSuggestion('How do I automate a task?')">Automation</button>
+          <button class="suggestion-chip" onclick="sendSuggestion('How do I solve a real problem with technology?')">Problem solving</button>
+          <button class="suggestion-chip" onclick="sendSuggestion('How do I become a freelancer?')">Freelancing</button>
+        </div>
+        <form class="chat-form" onsubmit="sendMessage(event)">
+          <input type="text" id="chatInput" placeholder="Ask your AI tutor anything..." autocomplete="off">
+          <button type="submit" class="chat-send">Send ➤</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact-section" id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-subtitle">Have questions or suggestions? We'd love to hear from you.</p>
+    <div class="contact-grid">
+      <form class="contact-form" onsubmit="submitContact(event)">
+        <input type="text" id="contactName" placeholder="Your name" required>
+        <input type="email" id="contactEmail" placeholder="Your email">
+        <input type="text" id="contactSubject" placeholder="Subject">
+        <textarea id="contactMessage" rows="4" placeholder="Your message" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+      <div class="newsletter-box">
+        <h3>Newsletter</h3>
+        <p>Subscribe to get updates on new courses and features.</p>
+        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand"><span class="logo-icon">🎓</span><span>Humanity Nepal AI</span></div>
+      <p class="footer-tagline">Education for all. Problem + Solve = Success | Think = Do. Powered by Cloudflare.</p>
+      <div class="footer-links">
+        <a href="#courses">Courses</a><a href="#framework">Framework</a><a href="#challenges">Challenges</a>
+        <a href="#roadmap">Roadmap</a><a href="#projects">Projects</a><a href="#resources">Resources</a>
+        <a href="#tutor">AI Tutor</a><a href="#leaderboard">Leaderboard</a><a href="#" onclick="openAdmin(event)">Admin</a>
+      </div>
+      <p class="footer-copy">© 2026 Humanity Nepal AI. Built with ❤️ for students and humanity everywhere.</p>
+    </div>
+  </footer>
+
+  <!-- Admin Modal -->
+  <div class="modal-overlay" id="adminModal">
+    <div class="modal admin-modal">
+      <button class="modal-close" onclick="closeAdmin()">✕</button>
+      <h2 class="admin-title">Admin Dashboard</h2>
+      <div class="admin-stats" id="adminStats"></div>
+      <h3 class="admin-subtitle">Recent Students</h3>
+      <div class="admin-table-container">
+        <table class="admin-table" id="adminStudentsTable">
+          <thead><tr><th>Name</th><th>Email</th><th>Country</th><th>Points</th><th>Joined</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certificate Modal -->
+  <div class="modal-overlay" id="certificateModal">
+    <div class="modal certificate-modal">
+      <button class="modal-close" onclick="closeCertificate()">✕</button>
+      <div class="certificate" id="certificateContent">
+        <div class="certificate-header"><span class="certificate-icon">🎓</span><h2>Certificate of Completion</h2></div>
+        <p class="certificate-text">This certifies that</p>
+        <h3 class="certificate-name" id="certStudentName">Student Name</h3>
+        <p class="certificate-text">has successfully completed</p>
+        <h3 class="certificate-course" id="certCourseName">Course Name</h3>
+        <p class="certificate-date" id="certDate">Date</p>
+        <div class="certificate-seal">Humanity Nepal AI</div>
+      </div>
+      <button class="btn btn-primary" onclick="downloadCertificate()">Download Certificate</button>
+    </div>
+  </div>
+
+  <!-- Project Submit Modal -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal project-modal">
+      <button class="modal-close" onclick="closeProjectForm()">✕</button>
+      <h2 class="admin-title">Submit Your Project</h2>
+      <p style="padding: 0 32px; color: var(--text-secondary);">Share what you've built! Inspire others and showcase your skills.</p>
+      <form class="project-form" onsubmit="submitProject(event)" style="padding: 24px 32px 32px;">
+        <input type="text" id="projectTitle" placeholder="Project title" required>
+        <textarea id="projectDescription" rows="3" placeholder="What does your project do?" required></textarea>
+        <input type="text" id="projectProblem" placeholder="What problem does it solve?">
+        <input type="text" id="projectSolution" placeholder="How does it solve the problem?">
+        <input type="text" id="projectTech" placeholder="Tech stack (e.g., JavaScript, Python, Cloudflare)">
+        <input type="url" id="projectUrl" placeholder="Project URL (if deployed)">
+        <button type="submit" class="btn btn-primary">Submit Project</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -17,7 +17,7 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - name: Install Dependencies
         run: |
-          pip install google-genai openai anthropic requests
+          pip install google-genai openai anthropic requests pillow edge-tts
       - name: Execute Yummy Studio & USA-auto Pipelines
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -26,5 +26,5 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         run: |
-          if [ -f "Yummy-Studio-Automation/main.py" ]; then python Yummy-Studio-Automation/main.py; fi
-          if [ -f "USA-auto/main.py" ]; then python USA-auto/main.py; fi
+          python Yummy-Studio-Automation/full_pipeline.py
+          python USA-auto/usa_viral_cartoon_engine.py

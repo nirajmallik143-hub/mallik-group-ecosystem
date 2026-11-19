@@ -1,0 +1,27 @@
+name = "humanity-nepal-ai"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+
+# Workers AI binding for the AI tutor chatbot and lesson translation
+[ai]
+binding = "AI"
+
+# Static assets for the frontend
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+# D1 database for students, progress, quizzes, challenges, projects
+[[d1_databases]]
+binding = "DB"
+database_name = "humanity_nepal_ai"
+database_id = "placeholder-create-database-first"
+
+# Environment variables (non-secret)
+[vars]
+ORG_NAME = "mallikgroup"
+DEFAULT_LANGUAGE = "en"
+AI_MODEL = "@cf/meta/llama-3-8b-instruct"
+
+# Secrets (set via: wrangler secret put API_KEY)
+# Do NOT put secrets in this file
